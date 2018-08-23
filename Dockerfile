@@ -2,6 +2,8 @@ FROM golang:1.10 as builder
 
 #RUN curl -fsSL -o /usr/local/bin/dep https://github.com/golang/dep/releases/download/v0.3.2/dep-linux-amd64 && chmod +x /usr/local/bin/dep
 
+RUN update-ca-certificates
+
 RUN mkdir -p /go/src/github.com/Sh4d1/drone-kubernetes
 WORKDIR /go/src/github.com/Sh4d1/drone-kubernetes
 
